@@ -33,17 +33,27 @@ Public Class inicio
         BtnMinimizar.Image = My.Resources.Minimizar
     End Sub
 #End Region
-#Region "Conexion sql"
-    Dim conexion As New SqlConnection
 
+#Region "Conexion SQL"
+    Dim conexion As New SqlConnection
     Dim comando As New SqlCommand
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Leer la cadena de conexión desde la variable de entorno
+        Dim connectionString As String = Environment.GetEnvironmentVariable("BD_MiniSuperMelillo")
 
-        conexion = New SqlConnection("server=Servername;database=database;integrated security=true")
+        ' Verificar si la variable de entorno tiene un valor
+        If String.IsNullOrEmpty(connectionString) Then
+            MsgBox("La cadena de conexión no está configurada correctamente.", MsgBoxStyle.Critical, "Error de conexión")
+            Exit Sub
+        End If
+
+        ' Establecer la conexión utilizando la cadena de conexión
+        conexion = New SqlConnection(connectionString)
 
     End Sub
 #End Region
+
     Private Sub Btningresar_Click(sender As Object, e As EventArgs) Handles Btningresar.Click
 
         conexion.Open()
