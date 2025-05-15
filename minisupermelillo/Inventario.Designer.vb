@@ -30,7 +30,7 @@ Partial Class Inventario
         Dim PrecioLabel As System.Windows.Forms.Label
         Dim ExistenciaLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Inventario))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.BtnMinimizar = New System.Windows.Forms.PictureBox()
@@ -66,7 +66,7 @@ Partial Class Inventario
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.BtnActualizar = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
         IdLabel = New System.Windows.Forms.Label()
         CodigoLabel = New System.Windows.Forms.Label()
         ProductoLabel = New System.Windows.Forms.Label()
@@ -254,14 +254,14 @@ Partial Class Inventario
         Me.ProductosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ProductosDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
         Me.ProductosDataGridView.DataSource = Me.ProductosBindingSource
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Maiandra GD", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.GrayText
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ProductosDataGridView.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Maiandra GD", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GrayText
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ProductosDataGridView.DefaultCellStyle = DataGridViewCellStyle3
         Me.ProductosDataGridView.Location = New System.Drawing.Point(357, 112)
         Me.ProductosDataGridView.Name = "ProductosDataGridView"
         Me.ProductosDataGridView.Size = New System.Drawing.Size(506, 164)
@@ -387,6 +387,7 @@ Partial Class Inventario
         'ImagenPictureBox
         '
         Me.ImagenPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.ImagenPictureBox.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ImagenPictureBox.DataBindings.Add(New System.Windows.Forms.Binding("Image", Me.ProductosBindingSource, "imagen", True))
         Me.ImagenPictureBox.Location = New System.Drawing.Point(242, 124)
         Me.ImagenPictureBox.Name = "ImagenPictureBox"
@@ -404,7 +405,7 @@ Partial Class Inventario
         Me.Button2.ForeColor = System.Drawing.Color.LawnGreen
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(19, 262)
+        Me.Button2.Location = New System.Drawing.Point(70, 262)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(119, 53)
         Me.Button2.TabIndex = 71
@@ -421,9 +422,9 @@ Partial Class Inventario
         Me.Button3.ForeColor = System.Drawing.Color.Red
         Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(19, 321)
+        Me.Button3.Location = New System.Drawing.Point(253, 321)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(119, 52)
+        Me.Button3.Size = New System.Drawing.Size(107, 52)
         Me.Button3.TabIndex = 72
         Me.Button3.Text = "Eliminar"
         Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -438,9 +439,9 @@ Partial Class Inventario
         Me.Button4.ForeColor = System.Drawing.Color.OrangeRed
         Me.Button4.Image = CType(resources.GetObject("Button4.Image"), System.Drawing.Image)
         Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button4.Location = New System.Drawing.Point(182, 321)
+        Me.Button4.Location = New System.Drawing.Point(135, 321)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(122, 52)
+        Me.Button4.Size = New System.Drawing.Size(112, 52)
         Me.Button4.TabIndex = 73
         Me.Button4.Text = "Guardar "
         Me.Button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -455,9 +456,9 @@ Partial Class Inventario
         Me.Button5.ForeColor = System.Drawing.Color.Khaki
         Me.Button5.Image = CType(resources.GetObject("Button5.Image"), System.Drawing.Image)
         Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button5.Location = New System.Drawing.Point(182, 262)
+        Me.Button5.Location = New System.Drawing.Point(195, 262)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(122, 53)
+        Me.Button5.Size = New System.Drawing.Size(119, 53)
         Me.Button5.TabIndex = 74
         Me.Button5.Text = "Agregar Producto"
         Me.Button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -487,7 +488,7 @@ Partial Class Inventario
         '
         Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(385, 298)
+        Me.PictureBox3.Location = New System.Drawing.Point(456, 298)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(71, 63)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -498,29 +499,29 @@ Partial Class Inventario
         '
         Me.PictureBox4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(462, 298)
+        Me.PictureBox4.Location = New System.Drawing.Point(533, 298)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(70, 63)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox4.TabIndex = 78
         Me.PictureBox4.TabStop = False
         '
-        'BtnActualizar
+        'Button6
         '
-        Me.BtnActualizar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnActualizar.FlatAppearance.BorderSize = 2
-        Me.BtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnActualizar.Font = New System.Drawing.Font("Maiandra GD", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnActualizar.ForeColor = System.Drawing.Color.Black
-        Me.BtnActualizar.Image = CType(resources.GetObject("BtnActualizar.Image"), System.Drawing.Image)
-        Me.BtnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnActualizar.Location = New System.Drawing.Point(581, 316)
-        Me.BtnActualizar.Name = "BtnActualizar"
-        Me.BtnActualizar.Size = New System.Drawing.Size(116, 40)
-        Me.BtnActualizar.TabIndex = 80
-        Me.BtnActualizar.Text = "Actualizar"
-        Me.BtnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnActualizar.UseVisualStyleBackColor = True
+        Me.Button6.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button6.FlatAppearance.BorderSize = 2
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.Font = New System.Drawing.Font("Maiandra GD", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.ForeColor = System.Drawing.Color.Black
+        Me.Button6.Image = CType(resources.GetObject("Button6.Image"), System.Drawing.Image)
+        Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button6.Location = New System.Drawing.Point(19, 321)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(110, 52)
+        Me.Button6.TabIndex = 80
+        Me.Button6.Text = "Cancelar"
+        Me.Button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button6.UseVisualStyleBackColor = True
         '
         'Inventario
         '
@@ -528,7 +529,7 @@ Partial Class Inventario
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.CornflowerBlue
         Me.ClientSize = New System.Drawing.Size(875, 392)
-        Me.Controls.Add(Me.BtnActualizar)
+        Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Label1)
@@ -616,5 +617,5 @@ Partial Class Inventario
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
-    Friend WithEvents BtnActualizar As Button
+    Friend WithEvents Button6 As Button
 End Class

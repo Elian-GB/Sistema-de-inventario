@@ -31,7 +31,7 @@ Public Class Inventario
         BtnMinimizar.Image = My.Resources.Minimizar
     End Sub
 #End Region
-
+#Region "Informacion de Productos"
     Private Sub cerrado()
         CodigoTextBox.Enabled = False
         ProductoTextBox.Enabled = False
@@ -39,6 +39,7 @@ Public Class Inventario
         PrecioTextBox.Enabled = False
         ExistenciaTextBox.Enabled = False
         Button4.Enabled = False
+        ImagenPictureBox.Enabled = False
     End Sub
 
 
@@ -49,19 +50,11 @@ Public Class Inventario
         PrecioTextBox.Enabled = True
         ExistenciaTextBox.Enabled = True
         Button4.Enabled = True
+        ImagenPictureBox.Enabled = True
     End Sub
-
-
+#End Region
+#Region "Inserter imagen"
     Private Sub ImagenPictureBox_Click(sender As Object, e As EventArgs) Handles ImagenPictureBox.Click
-        'Try
-        '    OpenFileDialog1.Title = "Abrir Imagen"
-        '    OpenFileDialog1.FileName = ".jpg"
-        '    OpenFileDialog1.Filter = "All files |*.*"
-        '    OpenFileDialog1.ShowDialog()
-        '    ImagenPictureBox.Image = System.Drawing.Image.FromFile(OpenFileDialog1)
-        'Catch ex As Exception
-
-        'End Try
 
         Try
             Dim ofd As New OpenFileDialog()
@@ -76,12 +69,7 @@ Public Class Inventario
             MessageBox.Show("Error al abrir la imagen: " & ex.Message)
         End Try
     End Sub
-
-
-
-
-
-
+#End Region
 
 #Region "movimiento de la ventana"
     <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
@@ -96,8 +84,10 @@ Public Class Inventario
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
 #End Region
+
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.Hide()
+        Me.Close()
         Menu1.Show()
     End Sub
     Private Sub ProductosBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
@@ -106,14 +96,14 @@ Public Class Inventario
         Me.TableAdapterManager.UpdateAll(Me.Bd1DataSet)
 
     End Sub
-
+#Region "Cargar Ventana"
     Private Sub Inventario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'Bd1DataSet.Productos' Puede moverla o quitarla según sea necesario.
         Me.ProductosTableAdapter.Fill(Me.Bd1DataSet.Productos)
         Me.KeyPreview = True
         cerrado()
     End Sub
-
+#End Region
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
         If RadioButton1.Checked = True Then
             Me.ProductosBindingSource.Filter = "codigo LIKE '%" & TextBox1.Text & "%'"
@@ -133,6 +123,7 @@ Public Class Inventario
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         If CodigoTextBox.Enabled = False Then
             abierto()
+            Button4.Enabled = False
         Else
             Me.Validate()
             Me.ProductosBindingSource.EndEdit()
@@ -190,7 +181,7 @@ Public Class Inventario
             End If
         End If
     End Sub
-
+#Region "Flechas de navegacion"
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
         Me.ProductosBindingSource.MoveNext()
     End Sub
@@ -211,19 +202,12 @@ Public Class Inventario
         Return MyBase.ProcessCmdKey(msg, keyData)
     End Function
 
-
-
-    Private Sub BtnActualizar_Click_1(sender As Object, e As EventArgs) Handles BtnActualizar.Click
-        ' Recargar los datos desde la base de datos
+    Private Sub Button6_Click_1(sender As Object, e As EventArgs) Handles Button6.Click
+        cerrado()
         Me.ProductosTableAdapter.Fill(Me.Bd1DataSet.Productos)
-
-        ' Actualizar el BindingSource
-        Me.ProductosBindingSource.ResetBindings(False)
-
-        ' Refrescar el DataGridView
-        ProductosDataGridView.Refresh()
-
-        ' Opcional: Mostrar mensaje de que la actualización fue exitosa
-        MsgBox("Los datos han sido actualizados", MsgBoxStyle.Information, "Actualización exitosa")
     End Sub
+
+
+#End Region
+
 End Class

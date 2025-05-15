@@ -103,6 +103,8 @@ Public Class Ventas
             Me.TableAdapterManager.UpdateAll(Me.Bd1DataSet)
             Me.ProductosTableAdapter.Fill(bd1DataSet.Productos)
             ProductosDataGridView.Refresh()
+            Me.ProductosBindingSource.ResetBindings(False)
+
 
             ' Limpia búsqueda
             TextBox1.Text = ""
@@ -174,7 +176,7 @@ Public Class Ventas
         ReleaseCapture()
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
-
+#End Region
     Private Sub ProductosBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.ProductosBindingSource.EndEdit()
@@ -186,11 +188,11 @@ Public Class Ventas
         'TODO: esta línea de código carga datos en la tabla 'Bd1DataSet.Productos' Puede moverla o quitarla según sea necesario.
         Me.ProductosTableAdapter.Fill(Me.Bd1DataSet.Productos)
         Me.KeyPreview = True
+        TextBox1.Focus()
     End Sub
-#End Region
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.Hide()
+        Me.Close()
         Menu1.Show()
     End Sub
     Private Sub Ventas_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
@@ -201,4 +203,5 @@ Public Class Ventas
                 Button11.PerformClick() ' Simula click en el botón 11 (Limpiar)
         End Select
     End Sub
+
 End Class
