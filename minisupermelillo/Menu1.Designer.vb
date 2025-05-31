@@ -24,12 +24,13 @@ Partial Class Menu1
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Menu1))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.BtnMinimizar = New System.Windows.Forms.PictureBox()
+        Me.BtnSalir = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.BtnMinimizar = New System.Windows.Forms.PictureBox()
-        Me.BtnSalir = New System.Windows.Forms.PictureBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.BtnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BtnSalir, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -45,10 +46,32 @@ Partial Class Menu1
         Me.Panel1.Size = New System.Drawing.Size(386, 41)
         Me.Panel1.TabIndex = 0
         '
+        'BtnMinimizar
+        '
+        Me.BtnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnMinimizar.Image = Global.minisupermelillo.My.Resources.Resources.Minimizar
+        Me.BtnMinimizar.Location = New System.Drawing.Point(316, 3)
+        Me.BtnMinimizar.Name = "BtnMinimizar"
+        Me.BtnMinimizar.Size = New System.Drawing.Size(30, 31)
+        Me.BtnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.BtnMinimizar.TabIndex = 3
+        Me.BtnMinimizar.TabStop = False
+        '
+        'BtnSalir
+        '
+        Me.BtnSalir.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnSalir.Image = Global.minisupermelillo.My.Resources.Resources.Cerrar
+        Me.BtnSalir.Location = New System.Drawing.Point(352, 3)
+        Me.BtnSalir.Name = "BtnSalir"
+        Me.BtnSalir.Size = New System.Drawing.Size(31, 31)
+        Me.BtnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.BtnSalir.TabIndex = 2
+        Me.BtnSalir.TabStop = False
+        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.RoyalBlue
-        Me.Panel2.Location = New System.Drawing.Point(-1, 323)
+        Me.Panel2.Location = New System.Drawing.Point(-1, 367)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(386, 13)
         Me.Panel2.TabIndex = 1
@@ -106,34 +129,35 @@ Partial Class Menu1
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'BtnMinimizar
+        'Button2
         '
-        Me.BtnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnMinimizar.Image = Global.minisupermelillo.My.Resources.Resources.Minimizar
-        Me.BtnMinimizar.Location = New System.Drawing.Point(316, 3)
-        Me.BtnMinimizar.Name = "BtnMinimizar"
-        Me.BtnMinimizar.Size = New System.Drawing.Size(30, 31)
-        Me.BtnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.BtnMinimizar.TabIndex = 3
-        Me.BtnMinimizar.TabStop = False
-        '
-        'BtnSalir
-        '
-        Me.BtnSalir.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnSalir.Image = Global.minisupermelillo.My.Resources.Resources.Cerrar
-        Me.BtnSalir.Location = New System.Drawing.Point(352, 3)
-        Me.BtnSalir.Name = "BtnSalir"
-        Me.BtnSalir.Size = New System.Drawing.Size(31, 31)
-        Me.BtnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.BtnSalir.TabIndex = 2
-        Me.BtnSalir.TabStop = False
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.Button2.FlatAppearance.BorderSize = 2
+        Me.Button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Maiandra GD", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
+        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button2.Location = New System.Drawing.Point(100, 289)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.Button2.Size = New System.Drawing.Size(178, 58)
+        Me.Button2.TabIndex = 8
+        Me.Button2.Text = "Historial"
+        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'Menu1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.CornflowerBlue
-        Me.ClientSize = New System.Drawing.Size(385, 335)
+        Me.ClientSize = New System.Drawing.Size(385, 380)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button1)
@@ -159,4 +183,5 @@ Partial Class Menu1
     Friend WithEvents Button1 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents Button2 As Button
 End Class

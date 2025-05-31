@@ -76,6 +76,10 @@ Partial Class Ventas
         Me.ImagenPictureBox = New System.Windows.Forms.PictureBox()
         Me.Button11 = New System.Windows.Forms.Button()
         Me.Button10 = New System.Windows.Forms.Button()
+        Me.Hra = New System.Windows.Forms.Timer(Me.components)
+        Me.hora = New System.Windows.Forms.Label()
+        Me.fecha = New System.Windows.Forms.Label()
+        Me.fcha = New System.Windows.Forms.Timer(Me.components)
         IdLabel = New System.Windows.Forms.Label()
         CodigoLabel = New System.Windows.Forms.Label()
         ProductoLabel = New System.Windows.Forms.Label()
@@ -590,12 +594,46 @@ Partial Class Ventas
         Me.Button10.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button10.UseVisualStyleBackColor = True
         '
+        'Hra
+        '
+        Me.Hra.Enabled = True
+        Me.Hra.Interval = 1000
+        '
+        'hora
+        '
+        Me.hora.AutoSize = True
+        Me.hora.Font = New System.Drawing.Font("Maiandra GD", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.hora.ForeColor = System.Drawing.SystemColors.Control
+        Me.hora.Location = New System.Drawing.Point(527, 55)
+        Me.hora.Name = "hora"
+        Me.hora.Size = New System.Drawing.Size(27, 19)
+        Me.hora.TabIndex = 55
+        Me.hora.Text = "..."
+        '
+        'fecha
+        '
+        Me.fecha.AutoSize = True
+        Me.fecha.Font = New System.Drawing.Font("Maiandra GD", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.fecha.ForeColor = System.Drawing.SystemColors.Control
+        Me.fecha.Location = New System.Drawing.Point(647, 55)
+        Me.fecha.Name = "fecha"
+        Me.fecha.Size = New System.Drawing.Size(27, 19)
+        Me.fecha.TabIndex = 56
+        Me.fecha.Text = "..."
+        '
+        'fcha
+        '
+        Me.fcha.Enabled = True
+        Me.fcha.Interval = 1000
+        '
         'Ventas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.CornflowerBlue
         Me.ClientSize = New System.Drawing.Size(794, 406)
+        Me.Controls.Add(Me.fecha)
+        Me.Controls.Add(Me.hora)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
@@ -697,4 +735,8 @@ Partial Class Ventas
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents Hra As Timer
+    Friend WithEvents hora As Label
+    Public WithEvents fecha As Label
+    Friend WithEvents fcha As Timer
 End Class
