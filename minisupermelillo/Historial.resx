@@ -117,4 +117,35 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAvRJREFUWEe9
+        V89rE0EYzR9QL0rI5sdMPWr1UJykCdU2k4t4EbEXL4V68AeoUAQRBEUR28RarBKr9iBSk9TuelCs4lUv
+        0ovYqND2UvAiQjVERYnaOvJNkyU7s9mdbKoP3mE3O++97Mx8863PpwgjktioIzqgYzqpY1o0MC0b7SnG
+        iWkZ7vHfEB2AZ8XxnvEApbYZiOZ0TCumoQv5s4jmYKyopwzDn2wzEM0amK6IBsqEsaDhT7aJ+o643967
+        1cB0QRL0SkwXQFP0scVUmMZ1TEuSSIsETdAW/SyAlP/CvEbQbvgm+Jyv52tvRPCwWxN8sYgPC9Qx5RTv
+        N01EsxZzvtUarPbPc/PMK5bn5lkBJyVN8LJsUR0l89JDVbaKkWCMTaIeSRfqBDfnFc6hyNSQCUaVWeg7
+        Io27E9ll0eWeUDF56bQxXu8AwNvhbssaAm8f1G/R1C3Ak8EL7P3LV2xiZ59k7hQAmA0l2HQ1BHhDgKJo
+        6hTg2alL7M/qKr83c+KcZOAWADgW6mJTOAkBij7LqWbDeqF686UXs+xWfB+7Gdtr4diWlGsA4JVgjOVQ
+        T9knGoqsobD/sGnuhF/ff7DHx86a16JxPS8Ho0w5wN3d/ex35ad53QjfPi6zh4dOm9eiqcimpsDoHzRD
+        LD2fZaObuyVBoMoUANMa+dr0IqwP8fTkRUm0mQAZjbzxtA2nDxxnb/UZdqNzjyzaTIAAufdfC5HIdGDH
+        QeVSLG43Jz46esY1QFojleENsU1r5wGiOdFYDOAVorFJjRSUjuNPLRzHH16/k43X/v3KUCC63QxQfQu2
+        DQnU7euhuCTSCtMBMm4x5wEcWjI4wcbDCUnIEzWyeN7fIbdkAKemVG+nbCJiX3iUqZHSkNbZIfpa4NaW
+        Q2MhCatQI6XhAHFuy2tw+zCBFmtENHCiRhZd/7kIt0+zPOplo8GYbFZHWO2w4BrOuQqcPk6hqbga6rIz
+        rmQ0kpe2Wito9HkO2/RaKP4FDhao7VBezQqngL/u2X/JxfDEswAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <metadata name="Bd1DataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="HistorialComprasBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>131, 17</value>
+  </metadata>
+  <metadata name="HistorialComprasTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>354, 17</value>
+  </metadata>
+  <metadata name="TableAdapterManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>570, 17</value>
+  </metadata>
 </root>

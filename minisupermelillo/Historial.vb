@@ -45,6 +45,16 @@ Public Class Historial
     End Sub
 #End Region
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+        Menu1.Show()
+    End Sub
 
+
+    Private Sub Historial_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'Bd1DataSet.HistorialCompras' Puede moverla o quitarla según sea necesario.
+        Me.HistorialComprasTableAdapter.Fill(Me.Bd1DataSet.HistorialCompras)
+
+    End Sub
 
 End Class

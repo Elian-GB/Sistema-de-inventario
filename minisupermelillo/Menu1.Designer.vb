@@ -100,7 +100,7 @@ Partial Class Menu1
         Me.Button4.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.Button4.Image = CType(resources.GetObject("Button4.Image"), System.Drawing.Image)
         Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button4.Location = New System.Drawing.Point(100, 213)
+        Me.Button4.Location = New System.Drawing.Point(100, 199)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(178, 58)
         Me.Button4.TabIndex = 5
@@ -121,7 +121,7 @@ Partial Class Menu1
         Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(100, 137)
+        Me.Button1.Location = New System.Drawing.Point(100, 123)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(178, 58)
         Me.Button1.TabIndex = 2
@@ -142,7 +142,7 @@ Partial Class Menu1
         Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(100, 289)
+        Me.Button2.Location = New System.Drawing.Point(100, 275)
         Me.Button2.Name = "Button2"
         Me.Button2.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.Button2.Size = New System.Drawing.Size(178, 58)
